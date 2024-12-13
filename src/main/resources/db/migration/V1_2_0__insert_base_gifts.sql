@@ -1,0 +1,11 @@
+INSERT INTO gift (name, giver_name, receiver_name, date_of_given) VALUES
+                                                                      ('Gift 1', 'Giver 1', 'Receiver 1', '2024-03-08 10:00:00'),
+                                                                      ('Gift 2', 'Giver 2', 'Receiver 2', '2024-03-08 11:00:00'),
+                                                                      ('Gift 3', 'Giver 3', 'Receiver 3', '2024-03-08 12:00:00'),
+                                                                      ('Gift 4', 'Giver 4', 'Receiver 4', '2024-03-08 13:00:00'),
+                                                                      ('Gift 5', 'Giver 5', 'Receiver 5', '2024-03-08 14:00:00'),
+                                                                      ('Gift 6', 'Giver 6', 'Receiver 6', '2024-03-08 15:00:00'),
+                                                                      ('Gift 7', 'Giver 7', 'Receiver 7', '2024-03-08 16:00:00'),
+                                                                      ('Gift 8', 'Giver 8', 'Receiver 8', '2024-03-08 17:00:00'),
+                                                                      ('Gift 9', 'Giver 9', 'Receiver 9', '2024-03-08 18:00:00'),
+                                                                      ('Gift 10', 'Giver 10', 'Receiver 10', '2024-03-08 19:00:00');
