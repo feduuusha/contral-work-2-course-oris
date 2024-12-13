@@ -6,6 +6,7 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
+import org.flywaydb.core.Flyway;
 import ru.itis.contralwork.dao.GiftRepository;
 import ru.itis.contralwork.dao.GiftRepositoryImpl;
 import ru.itis.contralwork.mapper.GiftRowMapper;
@@ -35,6 +36,9 @@ public class ContextListener implements ServletContextListener {
         } catch (ClassNotFoundException e) {
             throw new IllegalStateException("Exception while load db driver", e);
         }
+        Flyway flyway = Flyway.configure()
+                .dataSource(properties.getProperty("dataSource.url"), properties.getProperty("dataSource.user"), properties.getProperty("dataSource.password")).load();
+        flyway.migrate();
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setJdbcUrl(properties.getProperty("dataSource.url"));
         hikariConfig.setUsername(properties.getProperty("dataSource.user"));
