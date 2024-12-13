@@ -5,14 +5,6 @@
     <title>Gifts</title>
 </head>
 <body>
-<form action="/gifts" method="post">
-
-    Input gift id:
-    <label>
-        <input type="number" name="id">
-    </label>
-    <button type="submit">Get gift by ID</button>
-</form>
 <table>
     <th>Gift ID</th>
     <th>Gift Name</th>
@@ -26,7 +18,7 @@
 
     %>
     <tr>
-        <td><%=gift.getId()%></td>
+        <td><a href="/gifts?id=<%=gift.getId()%>"><%=gift.getId()%></a></td>
         <td><%=gift.getName()%></td>
         <td><%=gift.getGiverName()%></td>
         <td><%=gift.getReceiverName()%></td>
